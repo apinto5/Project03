@@ -62,5 +62,10 @@ img{
   margin: 50px auto;
   border-radius: 20px;
 }
-
+ #map {
+     width: 700px;
+     height: 500px;
+     background-color: #ccc;
+     margin: 30px auto;
+}
 
