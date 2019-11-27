@@ -1,8 +1,8 @@
 var el = ["1"]
 
 function init(){
-	alert('it works');
-	var el = document.getElementById('canvas');
+	alert('Code ran');
+	var el = document.getElementById('map');
 	var myLocation = new google.maps.LatLng(41.833002,-87.624128);
 	var myLocation1 = new google.maps.LatLng(43.853582, -71.657638);
 	var myLocation2 = new google.maps.LatLng(41.833740, -87.628329);
