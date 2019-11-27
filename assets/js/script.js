@@ -1,65 +1,38 @@
-var el = ["1"]
+var map;
 
-function initMap(){
-	alert('Code ran');
-	var el = document.getElementById('map');
-	var myLocation = new google.maps.LatLng(41.833002,-87.624128);
-	var myLocation1 = new google.maps.LatLng(43.853582, -71.657638);
-	var myLocation2 = new google.maps.LatLng(41.833740, -87.628329);
-	
-	var mapOptions = {
-		center: myLocation,
-		zoom: 18,
-		mapTypeId: google.maps.MapTypeId.SATELLITE,
-		mapTypeControlOptions: {
-			position: google.maps.ControlPosition.BOTTOM_CENTER
-		}
-	};
-
-	var myMap = new google.maps.Map(el, mapOptions);
-
-	var marker = new google.maps.Marker({
-		position: myLocation,
-		map: myMap,
-		animation: google.maps.Animation.BOUNCE,
-		label: el[0], 
-		
-	});
-	var marker2 = new google.maps.Marker({
-		position: myLocation2,
-		map: myMap,
-		animation: google.maps.Animation.BOUNCE,
-	});
-	var marker3 = new google.maps.Marker({
-	position: myLocation1,
-	map: myMap,
-	animation: google.maps.Animation.BOUNCE,
-	});	
-	var contentString = '<h1> Alpha Epslion of Phi Kappa Sigma </h1><p>Fraternity</p>';
-
-	var infowindow = new google.maps.InfoWindow({
-      content: contentString
-  	});
-	var contentString2 = '<h1> Branch Brook Campground </h1><p>Home</p>';
-
-	var infowindow2 = new google.maps.InfoWindow({
-      content: contentString2
-  	});
-	var contentString3 = '<h1>Galvin Library</h1><p>Work</p>';
-
-	var infowindow3 = new google.maps.InfoWindow({
-      content: contentString3
-  	});
-
-	google.maps.event.addListener(marker, 'mouseover', function() {
-    	infowindow.open(myMap, marker);
-  	});
-		google.maps.event.addListener(marker2, 'mouseover', function() {
-    	infowindow2.open(myMap, marker2);
-  	});
-		google.maps.event.addListener(marker3, 'mouseover', function() {
-    	infowindow3.open(myMap, marker3);
-  	});
+function init(){
+    map = new google.maps.Map(document.getElementById('canvas'), {
+    center: new google.maps.LatLng(41.833002,-87.624128),//Setting Initial Position
+    zoom: 17,
+  });
 }
 
 google.maps.event.addDomListener(window, 'load', init);
+
+
+google.maps.event.addDomListener(document.getElementById('button1'), 'click', function () {
+	map.setCenter(new google.maps.LatLng(42.497938, -87.956880));
+	map.setZoom(17);
+	map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
+});
+
+google.maps.event.addDomListener(document.getElementById('button2'), 'click', function () {
+    map.setCenter(new google.maps.LatLng(-50.607311, 165.971229));
+    map.setZoom(15);
+    map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
+
+});
+
+google.maps.event.addDomListener(document.getElementById('button3'), 'click', function () {
+    map.setCenter(new google.maps.LatLng(12.370367, 23.322272));
+    map.setZoom(18);
+    map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+});
+
+
+google.maps.event.addDomListener(document.getElementById('button4'), 'click', function () {
+    map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+    map.setCenter(new google.maps.LatLng(42.658056, -87.043121));
+    map.zoom(18);
+    
+});
