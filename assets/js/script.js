@@ -29,11 +29,3 @@ google.maps.event.addDomListener(document.getElementById('btn3'), 'click', funct
     map.setZoom(18);
     map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
 });
-
-
-google.maps.event.addDomListener(document.getElementById('button4'), 'click', function () {
-    map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
-    map.setCenter(new google.maps.LatLng(42.658056, -87.043121));
-    map.zoom(18);
-    
-});
