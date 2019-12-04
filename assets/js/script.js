@@ -9,9 +9,10 @@ function initMap() {
   document.getElementById('map'), {zoom: 15, center: centerM});
   // The marker, positioned at Uluru
   var marker = new google.maps.Marker({position: centerM, map: map});
-  document.getElementById("btn1").addEventListener("click", changeLocation(-50.607311, 65.971229));
+  document.getElementById("btn1").addEventListener("click", changeLocation(-50.607311, 165.971229));
 }
 function changeLocation(setLat, setLon){
+      alert("WORKED")
       map.setCenter(new google.maps.LatLng(setLat, setLong));
 }
 
