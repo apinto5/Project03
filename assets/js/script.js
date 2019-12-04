@@ -16,5 +16,5 @@ function setLatLon(btnN){
   if(btnN == "btn3"){
      map.setCenter(new google.maps.LatLng(41.834523, -87.628393));
   }
-}
+}();
 
