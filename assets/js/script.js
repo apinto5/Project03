@@ -12,5 +12,11 @@ function initMap() {
 function changeLocation(setLat, setLon){
       map.setCenter(new google.maps.LatLng(setLat, setLong));
 }
+var inputElement = document.createElement('input');
 
+inputElement.type = "button"
+inputElement.addEventListener('click', function(){
+    changeLocation(12.370367, 23.322272);
+});
+document.body.appendChild(inputElement);​
 
