@@ -19,13 +19,16 @@ function moveToLocation(lat, lng){
 
 function slideshow() {
 	var beg;
-	var grab_html_element = document.getElementsByClassName("pics");
+	var html_element = document.getElementsByClassName("pics");
+	
 	for (beg = 0; beg < grab_html_element.length;beg++) {
-		grab_html_element[beg].style.display="none";
+		html_element[beg].style.display="none";
 	}
 	start++;
-	if (start > grab_html_element.length) {
-    start = 1}
-	grab_html_element[start - 1].style.display = "block";
+	
+	if (start > html_element.length) {
+    		start = 1
+	}
+	html_element[start - 1].style.display = "block";
 	setTimeout(slideshow, 3000);
 }
