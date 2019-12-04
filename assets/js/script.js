@@ -1,6 +1,5 @@
 window.map = undefined;
-var start = 0;
-slideshow();
+
 
 function initMap() {
   var centerM = {lat: 41.833608, lng: -87.624165};
@@ -16,7 +15,8 @@ function moveToLocation(lat, lng){
   window.map.panTo(center);
 }
 
-
+var start = 0;
+slideshow();
 function slideshow() {
 	var beg;
 	var html_element = document.getElementsByClassName("pics");
