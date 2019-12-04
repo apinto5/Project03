@@ -81,8 +81,8 @@ img{
 }
 @media screen and (max-width: 600px) {
 	map{
-		width:30%;
-		height:60%;
+		width:10%;
+		height:30%;
 	}
 	buttons {
 		height:20%;
