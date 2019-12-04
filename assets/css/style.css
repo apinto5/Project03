@@ -68,4 +68,28 @@ img{
      background-color: #ccc;
      margin: 30px auto;
 }
-
+@media screen and (max-width: 600px) {
+	body{
+		padding-left: 1em;
+		padding-right: 1em;
+		background-color: blue;
+	}
+	h1 {
+		color: lightblue;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 600px) {
+	map{
+		width:30%;
+		height:60%;
+	}
+	buttons {
+		height:20%;
+		border: none;
+	}
+	#buttons .button{
+		margin:5% auto;
+		border-radius: 0px;
+	}
+}
