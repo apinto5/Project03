@@ -16,6 +16,7 @@ var inputElement = document.createElement('input');
 
 inputElement.type = "button"
 inputElement.addEventListener('click', function(){
+    alert("THIS RAN")
     changeLocation(12.370367, 23.322272);
 });
 document.body.appendChild(inputElement);​
